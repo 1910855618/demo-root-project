@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form {
+            background-color: white;
+            width: 300px;
+            text-align: center;
+            padding: 45px;
+        }
+
+        .form h3 {
+            margin-bottom: 25px;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="userForm" class="login-page" action="/login" method="post">
+        <div class="form">
+            <h3>账户登录</h3>
+            <label>
+                <input type="text" placeholder="用户名" name="username" required="required" />
+            </label>
+            <label>
+                <input type="password" placeholder="密码" name="password" required="required" />
+            </label>
+            <span style="display: inline">
+                <label>
+                    <input type="text" name="imageCode" placeholder="验证码" style="width: 50%;"/>
+                    <img src="/validate/code/image" alt=""/>
+                </label>
+            </span>
+            <label>
+                <input type="checkbox" name="remember-me"/>
+                记住我
+            </label>
+            <button type="submit">登录</button>
+            <a href="#" onclick="document.getElementById('userForm').style.display='none';document.getElementById('smsForm').style.display='block'">短信登录</a>
+        </div>
+    </form>
+    <form id="smsForm" class="login-page" style="display: none" action="/login/mobile" method="post">
+        <div class="form">
+            <h3>短信验证码登录</h3>
+            <label>
+                <input type="text" placeholder="手机号" name="mobile" value="17777777777" required="required"/>
+            </label>
+            <span style="display: inline">
+                <label>
+                    <input type="text" name="smsCode" placeholder="短信验证码" style="width: 50%;"/>
+                    <a href="#" onclick="
+                        let xhr = new XMLHttpRequest();
+                        let url = '/validate/code/sms?mobile=17777777777';
+                        xhr.open('GET', url, true);
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState === 4 && xhr.status === 200) {
+                                // 请求成功，处理响应数据
+                                let responseData = JSON.parse(xhr.responseText);
+                                console.log(responseData);
+                            }
+                        };
+                        xhr.send();
+                    ">发送验证码</a>
+                </label>
+            </span>
+            <button type="submit">登录</button>
+            <a href="#" onclick="document.getElementById('smsForm').style.display='none';document.getElementById('userForm').style.display='block'">用户登录</a>
+        </div>
+    </form>
+</body>
+</html>
