@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-spring-security" />
         <module name="demo-oauth2-01" />
+        <module name="demo-thymeleaf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

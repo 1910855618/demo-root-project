@@ -16,6 +16,7 @@
     <modules>
         <module>demo-spring-security</module>
         <module>demo-oauth2-01</module>
+        <module>demo-thymeleaf</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
@@ -105,14 +106,10 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons.lang3.version}</version>
             </dependency>
+            <!-- oauth2 依赖，其中包含了 spring-cloud-starter-security 所以不用额外引用 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-oauth2</artifactId>
-                <version>${spring.oauth2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-security</artifactId>
                 <version>${spring.oauth2.version}</version>
             </dependency>
         </dependencies>

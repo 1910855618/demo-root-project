@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo-thymeleaf
+  thymeleaf:
+    # 开启模板缓存（默认值：true）
+    cache: false
+    # 显示模板之前，检查模板是否存在。
+    check-template: true
+    # 检查模板位置是否正确（默认值:true）
+    check-template-location: true
+    # Content-Type 的值（默认值：text/html）
+    servlet:
+      content-type: text/html
+    # 开启 MVC Thymeleaf 视图解析（默认值：true）
+    enabled: true
+    # 模板编码
+    encoding: utf-8
+    # 要运用于模板之上的模板模式。另见 StandardTemplate-ModeHandlers(默认值：HTML)
+    mode: HTML
+    # 在构建 URL 时添加到视图名称前的前缀（默认值：classpath:/templates/）
+    prefix: classpath:/templates/
+    # 在构建 URL 时添加到视图名称后的后缀（默认值：.html）
+    suffix: .html
+    # Thymeleaf 模板解析器在解析器链中的顺序。默认情况下，它排第一位。顺序从1开始，只有在定义了额外的 TemplateResolver Bean 时才需要设置这个属性。
+    template-resolver-order:
+    # 可解析的视图名称列表，用逗号分隔（白名单效果）
+    view-names: account
+    # 要被排除在解析之外的视图名称列表，用逗号分隔（黑名单效果）
+    excluded-view-names:

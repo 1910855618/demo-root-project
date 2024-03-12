@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- 必须先引入 thymeleaf，不然就无法使用 thymeleaf 语法规则！ -->
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+    <head>
+        <title>account</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" th:href="@{/css/account.css}" type="text/css">
+    </head>
+    <body>
+        <h2>th:if th:unless 逻辑判断</h2>
+        <p th:if="${accountList.get(0).getAccount()}=='Luhang'">th:if 结果为 true 显示</p>
+        <p th:unless="${accountList.get(1).getAccount()}=='Luhang'">th:unless 结果为 false 显示</p>
+        <h2>th:switch 分支控制</h2>
+        <div th:switch="${accountList.get(0).getAccount()}">
+            <p th:case="'Luhang'">可以显示</p>
+            <p th:case="'Mike'">不可以显示</p>
+        </div>
+        <h2>th:text 运算</h2>
+        <p th:text="${accountList.size()}%2 == 0"></p>
+        <h2>th:each 循环</h2>
+        <table>
+            <tr>
+                <th>no</th>
+                <th>account</th>
+                <th>name</th>
+                <th>password</th>
+                <th>accountType</th>
+                <th>phone</th>
+                <th>oddOrEven</th>
+                <th>row</th>
+            </tr>
+            <tr th:each="user,iterStat : ${accountList}">
+                <!-- count: 当前迭代的计数 -->
+                <td th:text="${iterStat.count}"></td>
+                <td th:text="${user.account}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.password}"></td>
+                <td th:text="${user.accountType}"></td>
+                <td th:text="${user.phone}"></td>
+                <!-- odd: 判断是否是奇数行; even: 判断偶数行 -->
+                <td th:text="${iterStat.odd} ? 'odd' : 'even'" ></td>
+                <!-- first: 当前元素是第一行; last: 当前元素是最后一行 -->
+                <td th:text="${iterStat.first } ? '这是第一行' : (${iterStat.last} ? '这是最后一行' : '这是中间一行')" ></td>
+            </tr>
+        </table>
+    </body>
+</html>
