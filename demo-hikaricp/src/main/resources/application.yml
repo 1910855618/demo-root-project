@@ -10,4 +10,4 @@ spring:
     username: root
     password: 123456
     # 指定为 HikariDataSource
-#    type: com.zaxxer.hikari.HikariDataSource
+    type: com.zaxxer.hikari.HikariDataSource

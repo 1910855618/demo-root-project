@@ -33,6 +33,11 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
+        <!-- hikariCP 连接池控制依赖，一般 spring jdbc、jpa 等都内置了该依赖，由于这里没有导入相关依赖只能手动导入 -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+        </dependency>
         <!-- spring 测试依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

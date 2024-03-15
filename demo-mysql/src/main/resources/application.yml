@@ -16,6 +16,6 @@ spring:
     # allowMultiQueries=true 表示允许执行多个 SQL 查询。如果设置为 true，则允许一次发送多条 SQL 语句给数据库执行。
     # useUnicode=true 表示使用 Unicode 字符集。这样可以确保正确地处理数据库中的 Unicode 字符。
     # characterEncoding=UTF-8 指定了字符编码为 UTF-8。这样可以确保正确地处理数据库中的 UTF-8 编码的字符。
-    url: jdbc:mysql://luhang.fun:3306/test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
     username: root
-    password: ideal@#4r5t
+    password: 123456
