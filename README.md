@@ -8,4 +8,5 @@
 demo 集合：
 - SpringBoot 创建父子多模块项目(demo-root-project)：https://luhang.fun/blog/articles/20
 - SpringBoot 使用 Thymeleaf(demo-thymeleaf)：https://luhang.fun/blog/articles/21
+- SpringBoot 使用 Jackson(demo-json)：https://luhang.fun/blog/articles/22
 - SpringBoot 使用 SpringSecurity(demo-spring-security)：https://luhang.fun/blog/articles/18

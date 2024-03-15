@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/demo-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/demo-oauth2-01/pom.xml" />
         <option value="$PROJECT_DIR$/demo-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-json/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

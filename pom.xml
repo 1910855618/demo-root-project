@@ -17,6 +17,7 @@
         <module>demo-spring-security</module>
         <module>demo-oauth2-01</module>
         <module>demo-thymeleaf</module>
+        <module>demo-json</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
