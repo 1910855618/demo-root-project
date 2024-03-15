@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo-hikaricp
+  # 数据源配置
+  datasource:
+    # 指定数据库驱动程序的类名
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接 url
+    # jdbc:mysql:// 表示使用 JDBC 连接 MySQL 数据库。
+    # localhost:3306 指定连接地址和端口。
+    # test 表示连接数据库名。
+    # serverTimezone=Asia/Shanghai 指定了服务器时区为亚洲/上海时区。这是为了确保在与数据库进行时间相关操作时使用正确的时区。
+    # allowMultiQueries=true 表示允许执行多个 SQL 查询。如果设置为 true，则允许一次发送多条 SQL 语句给数据库执行。
+    # useUnicode=true 表示使用 Unicode 字符集。这样可以确保正确地处理数据库中的 Unicode 字符。
+    # characterEncoding=UTF-8 指定了字符编码为 UTF-8。这样可以确保正确地处理数据库中的 UTF-8 编码的字符。
+    url: jdbc:mysql://luhang.fun:3306/test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: ideal@#4r5t

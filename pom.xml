@@ -18,6 +18,8 @@
         <module>demo-oauth2-01</module>
         <module>demo-thymeleaf</module>
         <module>demo-json</module>
+        <module>demo-mysql</module>
+        <module>demo-hikaricp</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
