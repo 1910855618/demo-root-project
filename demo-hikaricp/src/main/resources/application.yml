@@ -4,10 +4,5 @@ server:
 spring:
   application:
     name: demo-hikaricp
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: 123456
-    # 指定为 HikariDataSource
-    type: com.zaxxer.hikari.HikariDataSource
+  profiles:
+    active: two

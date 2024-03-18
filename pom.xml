@@ -37,6 +37,7 @@
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <commons.lang3.version>3.14.0</commons.lang3.version>
         <spring.oauth2.version>2.2.5.RELEASE</spring.oauth2.version>
+        <mybatis.plus.boot.starter.version>3.5.5</mybatis.plus.boot.starter.version>
     </properties>
 
     <dependencies>
@@ -114,6 +115,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-oauth2</artifactId>
                 <version>${spring.oauth2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.boot.starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

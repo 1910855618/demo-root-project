@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: demo-hikaricp
+    name: demo-mysql
   # 数据源配置
   datasource:
     # 指定数据库驱动程序的类名
