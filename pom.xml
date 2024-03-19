@@ -20,6 +20,7 @@
         <module>demo-json</module>
         <module>demo-mysql</module>
         <module>demo-hikaricp</module>
+        <module>demo-java8-features</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
