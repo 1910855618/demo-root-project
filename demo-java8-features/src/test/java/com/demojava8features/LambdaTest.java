@@ -5,7 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 
 /**
  * lambda 表达式相关 demo
@@ -29,5 +33,15 @@ public class LambdaTest {
         // 类型推断机制
         BinaryOperator<Long> add = (Long x, Long y) -> x + y;
         BinaryOperator<Long> add2 = (x, y) -> x + y;
+
+        // 方法引用
+        // 引用静态方法
+        Comparator<Integer> sum = Integer::sum;
+        // 引用某个对象的方法
+        Arrays.asList("1","2").forEach(log::info);
+        // 引用某个类的方法
+        Function<String, Integer> stringIntegerFunction = String::length;
+        // 引用构造方法
+        Runnable runnable = HashMap::new;
     }
 }

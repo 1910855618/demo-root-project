@@ -106,5 +106,14 @@ public class FunctionTest {
         // 作用是把remappingFunction的计算结果关联到key上，如果计算结果为null，则在Map中删除key的映射
         map.compute(3, (k, v) -> v == null ? "": v.concat(v));
         log.info("compute 计算后 Map 中：{}", map);
+        // computeIfAbsent
+        // 只有在当前 Map 中不存在 key 值的映射或映射值为 null 时，才调用 mappingFunction，并在 mappingFunction 执行结果非 null 时，将结果跟 key 关联
+        map.computeIfAbsent(4, v -> "four - "+v);
+        log.info("computeIfAbsent 计算后 Map 中：{}", map);
+        // computeIfPresent
+        // 作用跟 computeIfAbsent 相反，即，只有在当前 Map 中存在 key 值的映射且非 null 时，
+        // 才调用 remappingFunction，如果 remappingFunction 执行结果为 null，则删除 key 的映射，否则使用该结果替换key原来的映射
+        map.computeIfPresent(4, (k, v) -> "key: " + k + ", value: " + v);
+        log.info("computeIfPresent 计算后 Map 中：{}", map);
     }
 }
