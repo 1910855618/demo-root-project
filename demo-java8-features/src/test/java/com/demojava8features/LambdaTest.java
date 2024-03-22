@@ -12,7 +12,7 @@ import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 /**
- * lambda 表达式相关 demo
+ * lambda 表达式相关 demo u
  * */
 @Log4j2
 @SpringBootTest
