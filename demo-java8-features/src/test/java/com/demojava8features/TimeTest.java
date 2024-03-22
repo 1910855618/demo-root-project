@@ -7,6 +7,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 
+/**
+ * java8 时间相关 demo
+ * */
 @Log4j2
 @SpringBootTest
 public class TimeTest {
@@ -59,6 +62,5 @@ public class TimeTest {
         Period period1 = Period.between(LocalDate.of(1999, 8, 15),
                 LocalDate.now());
         log.info("间隔日期：{}，间隔日期：{}", period, period1);
-        // ?
     }
 }

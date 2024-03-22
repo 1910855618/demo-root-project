@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * Stream 相关 demo u
+ * Stream 相关 demo
  * */
 @Log4j2
 @SpringBootTest

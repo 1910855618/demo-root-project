@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.function.Consumer;
 
 /**
- * 函数式接口相关 demo u
+ * 函数式接口相关 demo
  * */
 @Log4j2
 @SpringBootTest
