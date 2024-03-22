@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
+import java.util.concurrent.ForkJoinPool;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -22,6 +23,7 @@ public class StreamTest {
     void streamTest() {
         // filter
         // 作用是返回一个只包含满足 predicate 条件元素的 Stream
+        // 保留长度等于3的字符串
         Stream<String> stream = Stream.of("I", "very", "like", "you");
         stream.filter(str -> str.length()==3).forEach(s -> log.info("filter 过滤：{}", s));
         // distinct
@@ -34,16 +36,19 @@ public class StreamTest {
         stream.sorted((s1, s2) -> s1.length() - s2.length()).forEach(s -> log.info("sorted 排序：{}", s));
         // map
         // 作用是返回一个对当前所有元素执行执行 mapper 之后的结果组成的 Stream
+        // 字符串全大写
         stream = Stream.of("I", "very", "like", "you");
         stream.map(s -> s.toUpperCase()).forEach(s -> log.info("map 处理后的数据：{}", s));
         // flatMap
         // 作用是对每个元素执行 mapper 指定的操作，并用所有 mapper 返回的 Stream 中的元素组成一个新的 Stream 作为最终返回结果
+        // 作用相当于把原stream中的所有元素都"摊平"之后组成的Stream，转换前后元素的个数和类型都可能会改变
         Stream<List<Integer>> stream2 = Stream.of(Arrays.asList(1,2), Arrays.asList(3, 4, 5));
         stream2.flatMap(list -> list.stream()).forEach(v -> log.info("flatMap 平摊后的数据：{}", v));
         // reduce
         // reduce 操作可以实现从一组元素中生成一个值
         // 找出最长的单词
         stream = Stream.of("I", "very", "like", "you");
+        // Optional是（一个）值的容器，使用它可以避免null值的麻烦
         Optional<String> longest = stream.reduce((s1, s2) -> s1.length() >= s2.length() ? s1 : s2);
         log.info("reduce 查找出最长的字符串：{}", longest.get());
         // 求单词长度之和
@@ -67,6 +72,14 @@ public class StreamTest {
         stream = Stream.of("I", "very", "like", "you");
         Set<String> set = stream.collect(Collectors.toSet());
         set.forEach(s -> log.info("collect 转换后的 set：{}", s));
+        // 使用 toCollection 指定规约容器的类型
+        stream = Stream.of("I", "very", "like", "you");
+        ArrayList<String> arrayList = stream.collect(Collectors.toCollection(ArrayList::new));
+        arrayList.forEach(s -> log.info("collect 转换后的 arrayList：{}", s));
+        stream = Stream.of("I", "very", "like", "you");
+        HashSet<String> hashSet = stream.collect(Collectors.toCollection(HashSet::new));
+        hashSet.forEach(s -> log.info("collect 转换后的 hashSet：{}", s));
+
         // 使用 collect 生成 Map
         List<Student> students =
                 Arrays.asList(Student.builder().name("蔡徐坤").school("牛子").grade(1).chinese(15.4F).math(16F).english(20F).build(),
