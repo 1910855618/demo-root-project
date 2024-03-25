@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-spring-security" />
         <module name="demo-java8-features" />
+        <module name="demo-aop" />
         <module name="demo-hikaricp" />
         <module name="demo-thymeleaf" />
         <module name="demo-oauth2-01" />

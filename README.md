@@ -7,6 +7,7 @@
 
 demo 集合：
 - SpringBoot 创建父子多模块项目(demo-root-project)：https://luhang.fun/blog/articles/20
+- Java8 新特性相关类容：https://luhang.fun/blog/articles/25
 - SpringBoot 连接 MySQL(demo-mysql)：https://luhang.fun/blog/articles/23
 - SpringBoot 使用 HikariCP(demo-hikaricp)：https://luhang.fun/blog/articles/24
 - SpringBoot 使用 Thymeleaf(demo-thymeleaf)：https://luhang.fun/blog/articles/21
