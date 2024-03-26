@@ -12,4 +12,5 @@ demo 集合：
 - SpringBoot 使用 HikariCP(demo-hikaricp)：https://luhang.fun/blog/articles/24
 - SpringBoot 使用 Thymeleaf(demo-thymeleaf)：https://luhang.fun/blog/articles/21
 - SpringBoot 使用 Jackson(demo-json)：https://luhang.fun/blog/articles/22
+- SpringBoot 使用 AOP(demo-aop)：https://luhang.fun/blog/articles/26
 - SpringBoot 使用 SpringSecurity(demo-spring-security)：https://luhang.fun/blog/articles/18
