@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/demo-hikaricp/pom.xml" />
         <option value="$PROJECT_DIR$/demo-mysql/pom.xml" />
         <option value="$PROJECT_DIR$/demo-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-knife4j/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

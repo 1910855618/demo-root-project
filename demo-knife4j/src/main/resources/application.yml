@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo-knife4j
+  mvc:
+    pathmatch:
+      # 默认使用的是 AntPathMatcher 路径匹配策略，而 Swagger 也使用了 AntPathMatcher 来进行路径匹配。当两者发生冲突时，就会导致启动失败。
+      matching-strategy: ant_path_matcher
+
+knife4j:
+  # 开启增强配置
+  enable: true
+  # 开启 Swagger 的 Basic 认证功能,默认是 false
+  basic:
+    enable: true
+    username: admin
+    password: 123456

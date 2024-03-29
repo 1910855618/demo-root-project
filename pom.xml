@@ -22,6 +22,8 @@
         <module>demo-hikaricp</module>
         <module>demo-java8-features</module>
         <module>demo-aop</module>
+        <module>demo-mybatis-plus</module>
+        <module>demo-knife4j</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
@@ -40,6 +42,7 @@
         <commons.lang3.version>3.14.0</commons.lang3.version>
         <spring.oauth2.version>2.2.5.RELEASE</spring.oauth2.version>
         <mybatis.plus.boot.starter.version>3.5.5</mybatis.plus.boot.starter.version>
+        <knife4j.spring.boot.starter>3.0.3</knife4j.spring.boot.starter>
     </properties>
 
     <dependencies>
@@ -122,6 +125,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.boot.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.spring.boot.starter}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
