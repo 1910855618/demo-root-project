@@ -25,6 +25,7 @@
         <module>demo-mybatis-plus</module>
         <module>demo-knife4j</module>
         <module>demo-validation</module>
+        <module>demo-i18n</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
