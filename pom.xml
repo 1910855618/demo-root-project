@@ -24,6 +24,7 @@
         <module>demo-aop</module>
         <module>demo-mybatis-plus</module>
         <module>demo-knife4j</module>
+        <module>demo-validation</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

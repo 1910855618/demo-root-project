@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>demo-thymeleaf</artifactId>
+    <artifactId>demo-validation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo-thymeleaf</name>
-    <description>demo-thymeleaf</description>
+    <name>demo-validation</name>
+    <description>demo-validation</description>
 
     <!-- 打包文件为 jar 包 -->
     <packaging>jar</packaging>
@@ -28,10 +28,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- thymeleaf 模板依赖 -->
+        <!-- 参数校验依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <!-- spring 测试依赖 -->
         <dependency>
@@ -42,8 +42,6 @@
     </dependencies>
 
     <build>
-        <!-- 指定打包后文件名 -->
-        <finalName>thymeleaf</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -58,7 +56,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.demothymeleaf.DemoThymeleafApplication</mainClass>
+                    <mainClass>com.demovalidation.DemoValidationApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

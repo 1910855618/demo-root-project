@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo-validation
+  messages:
+    # Spring将尝试加载名为 messages.properties 的资源文件
+    basename: messages
+    encoding: UTF-8

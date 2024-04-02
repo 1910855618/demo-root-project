@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-mybatis-plus" />
+        <module name="demo-validation" />
         <module name="demo-spring-security" />
         <module name="demo-java8-features" />
         <module name="demo-aop" />

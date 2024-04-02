@@ -23,6 +23,8 @@
     <file url="file://$PROJECT_DIR$/demo-spring-security/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-thymeleaf/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-thymeleaf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-validation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-validation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
