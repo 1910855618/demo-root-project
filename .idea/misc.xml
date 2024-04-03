@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/demo-knife4j/pom.xml" />
         <option value="$PROJECT_DIR$/demo-validation/pom.xml" />
         <option value="$PROJECT_DIR$/demo-i18n/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-global-exception/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
