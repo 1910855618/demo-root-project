@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/demo-aop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-aop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-filter-interceptor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-filter-interceptor/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-global-exception/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-global-exception/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-hikaricp/src/main/java" charset="UTF-8" />

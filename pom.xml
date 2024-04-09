@@ -27,6 +27,7 @@
         <module>demo-validation</module>
         <module>demo-i18n</module>
         <module>demo-global-exception</module>
+        <module>demo-filter-interceptor</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

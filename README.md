@@ -16,5 +16,6 @@ demo 集合：
 - SpringBoot 使用 Knife4j(demo-knife4j)：https://luhang.fun/blog/articles/27
 - SpringBoot 全局异常处理(demo-global-exception)：https://luhang.fun/blog/articles/31
 - SpringBoot 使用 I18n(demo-i18n)：https://luhang.fun/blog/articles/29
+- SpringBoot 使用过滤器和拦截器(demo-filter-interceptor)：https://luhang.fun/blog/articles/32
 - SpringBoot 使用 HibernateValidator(demo-validation)：https://luhang.fun/blog/articles/28
 - SpringBoot 使用 SpringSecurity(demo-spring-security)：https://luhang.fun/blog/articles/18
