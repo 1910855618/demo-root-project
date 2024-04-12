@@ -28,6 +28,7 @@
         <module>demo-i18n</module>
         <module>demo-global-exception</module>
         <module>demo-filter-interceptor</module>
+        <module>demo-email</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

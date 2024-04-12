@@ -1,0 +1,30 @@
+spring:
+  mail:
+    # 邮件服务器的主机地址
+    host: smtp.qq.com
+    # 发送邮件的邮箱账号
+    username: 3105808192@qq.com
+    # 发送邮件的邮箱密码
+    password: wgiukdtjcpopdfjh
+    # 邮件的默认编码格式
+    default-encoding: UTF-8
+    #  使用的邮件发送协议
+    protocol: smtp
+    #  邮件服务器的端口号，465 对应 SMTP 协议的 SSL 端口
+    port: 465
+    properties:
+      mail:
+        smtp:
+          # 表示需要进行 SMTP 认证
+          auth: true
+          # 创建加密 SSL Socket 的类和 SSL Socket 的端口号
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
+          # 启用 SSL 加密
+          ssl:
+            enable: true
+          # 启用 TLS 加密
+          starttls:
+            enable: true
+            required: true
