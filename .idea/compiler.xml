@@ -11,6 +11,7 @@
         <module name="demo-spring-security" />
         <module name="demo-aop" />
         <module name="demo-i18n" />
+        <module name="demo-websocket" />
         <module name="demo-hikaricp" />
         <module name="demo-thymeleaf" />
         <module name="demo-oauth2-01" />

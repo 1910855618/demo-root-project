@@ -18,5 +18,6 @@ demo 集合：
 - SpringBoot 使用 I18n(demo-i18n)：https://luhang.fun/blog/articles/29
 - SpringBoot 使用过滤器和拦截器(demo-filter-interceptor)：https://luhang.fun/blog/articles/32
 - SpringBoot 使用 HibernateValidator(demo-validation)：https://luhang.fun/blog/articles/28
-- SpringBoot 发送 email 邮件(demo-email)：https://luhang.fun/blog/articles/33
+- SpringBoot 发送 Email 邮件(demo-email)：https://luhang.fun/blog/articles/33
+- SpringBoot 使用 WebSocket(demo-websocket)：https://luhang.fun/blog/articles/34
 - SpringBoot 使用 SpringSecurity(demo-spring-security)：https://luhang.fun/blog/articles/18

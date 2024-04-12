@@ -29,6 +29,7 @@
         <module>demo-global-exception</module>
         <module>demo-filter-interceptor</module>
         <module>demo-email</module>
+        <module>demo-websocket</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

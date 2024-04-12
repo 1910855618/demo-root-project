@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/demo-global-exception/pom.xml" />
         <option value="$PROJECT_DIR$/demo-filter-interceptor/pom.xml" />
         <option value="$PROJECT_DIR$/demo-email/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-websocket/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
