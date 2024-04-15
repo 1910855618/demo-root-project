@@ -15,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/demo-i18n/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-java8-features/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-java8-features/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-jdbc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-json/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-json/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-knife4j/src/main/java" charset="UTF-8" />
