@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>跨域测试</title>
+    </head>
+    <body>
+        <div id="hello"></div>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("http://localhost:8080/hello")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("hello").innerText = data
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                })
+        })
+    </script>
+</html>

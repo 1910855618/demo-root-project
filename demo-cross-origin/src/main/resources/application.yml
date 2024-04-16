@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo-cross-origin
+  thymeleaf:
+    # 开启模板缓存（默认值：true）
+    cache: false
+    # 模板编码
+    encoding: utf-8

@@ -32,6 +32,7 @@
         <module>demo-websocket</module>
         <module>demo-jdbc</module>
         <module>demo-base-config</module>
+        <module>demo-cross-origin</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

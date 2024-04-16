@@ -20,6 +20,7 @@
         <module name="demo-mybatis-plus" />
         <module name="demo-java8-features" />
         <module name="demo-global-exception" />
+        <module name="demo-cross-origin" />
         <module name="demo-filter-interceptor" />
         <module name="demo-json" />
         <module name="demo-knife4j" />
