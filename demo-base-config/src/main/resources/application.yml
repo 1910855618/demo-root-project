@@ -1,0 +1,7 @@
+author:
+  name: luhang
+  age: 24
+  introduce: I'm ${author.name}, ${author.age} years old.
+spring:
+  profiles:
+    active: prod

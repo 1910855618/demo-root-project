@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="product1" class="com.demobaseconfig.Bean.XmlConfigBean">
+        <property name="name" value="Anna" />
+        <property name="age" value="20" />
+    </bean>
+</beans>
