@@ -21,6 +21,9 @@ demo 集合：
 - SpringBoot 全局异常处理(demo-global-exception)：https://luhang.fun/blog/articles/31
 - SpringBoot 使用过滤器和拦截器(demo-filter-interceptor)：https://luhang.fun/blog/articles/32
 - SpringBoot 使用 I18n(demo-i18n)：https://luhang.fun/blog/articles/29
+- SpringBoot 异步调用(demo-async)：https://luhang.fun/blog/articles/38
 - SpringBoot 发送 Email 邮件(demo-email)：https://luhang.fun/blog/articles/33
 - SpringBoot 使用 WebSocket(demo-websocket)：https://luhang.fun/blog/articles/34
 - SpringBoot 使用 SpringSecurity(demo-spring-security)：https://luhang.fun/blog/articles/18
+
+持续输出中...

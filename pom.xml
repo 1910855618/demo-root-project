@@ -33,6 +33,7 @@
         <module>demo-jdbc</module>
         <module>demo-base-config</module>
         <module>demo-cross-origin</module>
+        <module>demo-async</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

@@ -23,6 +23,7 @@
         <option value="$PROJECT_DIR$/demo-websocket/pom.xml" />
         <option value="$PROJECT_DIR$/demo-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/demo-cross-origin/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-async/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

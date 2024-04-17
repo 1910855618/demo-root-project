@@ -13,6 +13,7 @@
         <module name="demo-i18n" />
         <module name="demo-base-config" />
         <module name="demo-websocket" />
+        <module name="demo-async" />
         <module name="demo-hikaricp" />
         <module name="demo-jdbc" />
         <module name="demo-thymeleaf" />
