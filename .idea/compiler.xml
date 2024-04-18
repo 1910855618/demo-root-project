@@ -20,6 +20,7 @@
         <module name="demo-oauth2-01" />
         <module name="demo-test" />
         <module name="demo-mybatis-plus" />
+        <module name="demo-devtools" />
         <module name="demo-java8-features" />
         <module name="demo-global-exception" />
         <module name="demo-cross-origin" />

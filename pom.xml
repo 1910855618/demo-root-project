@@ -35,6 +35,7 @@
         <module>demo-cross-origin</module>
         <module>demo-async</module>
         <module>demo-test</module>
+        <module>demo-devtools</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo-devtools
+  # 热部署配置
+  devtools:
+    livereload:
+      # 是否启用 LiveReload 功能，用于自动重新加载页面或应用程序
+      enabled: true
+      # LiveReload 服务端口
+      port: 35729
+    restart:
+      # 额外排除的模式，这些模式将不会触发完整重启
+      additional-exclude:
+      # 要监视变化的额外路径
+      additional-paths:
+      # 是否启用自动重启功能
+      enabled: true
+      # 排除触发完整重启的模式，即当这些模式的文件发生变化时，不会触发完整重启
+      exclude:
+      # 是否在重启时记录条件评估的差异
+      log-condition-evaluation-delta: true
+      # 在轮询类路径变化之间等待的时间间隔
+      poll-interval: 1s
+      # 在没有任何类路径变化时触发重启之前需要的安静时间
+      quiet-period: 400ms
+      # 当该文件发生变化时触发重启检查的特定文件的名称。如果未指定，则任何类路径文件的更改都将触发重启
+      trigger-file:
