@@ -23,6 +23,7 @@
         <module name="demo-devtools" />
         <module name="demo-java8-features" />
         <module name="demo-global-exception" />
+        <module name="demo-package" />
         <module name="demo-cross-origin" />
         <module name="demo-filter-interceptor" />
         <module name="demo-json" />

@@ -26,6 +26,7 @@
         <option value="$PROJECT_DIR$/demo-async/pom.xml" />
         <option value="$PROJECT_DIR$/demo-test/pom.xml" />
         <option value="$PROJECT_DIR$/demo-devtools/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-package/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
