@@ -24,6 +24,7 @@
         <option value="$PROJECT_DIR$/demo-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/demo-cross-origin/pom.xml" />
         <option value="$PROJECT_DIR$/demo-async/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
