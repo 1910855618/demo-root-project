@@ -37,6 +37,7 @@
         <module>demo-test</module>
         <module>demo-devtools</module>
         <module>demo-package</module>
+        <module>demo-redis</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

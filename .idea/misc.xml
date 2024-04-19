@@ -27,10 +27,16 @@
         <option value="$PROJECT_DIR$/demo-test/pom.xml" />
         <option value="$PROJECT_DIR$/demo-devtools/pom.xml" />
         <option value="$PROJECT_DIR$/demo-package/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-cloud/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-cloud/demo-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-cloud-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-redis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/demo-cloud-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-cloud/pom.xml" />
         <option value="$PROJECT_DIR$/demo-son-project/pom.xml" />
       </set>
     </option>

@@ -14,6 +14,7 @@ demo 集合：
 - SpringBoot 打包(demo-package)：https://luhang.fun/blog/articles/41
 - SpringBoot 连接 MySQL(demo-mysql)：https://luhang.fun/blog/articles/23
 - SpringBoot 使用 JdbcTemplate(demo-jdbc)：https://luhang.fun/blog/articles/35
+- SpringBoot 整合 Redis(demo-redis)：https://luhang.fun/blog/articles/42
 - SpringBoot 使用 HikariCP(demo-hikaricp)：https://luhang.fun/blog/articles/24
 - SpringBoot 使用 Thymeleaf(demo-thymeleaf)：https://luhang.fun/blog/articles/21
 - SpringBoot 处理跨域(demo-cross-origin)：https://luhang.fun/blog/articles/37

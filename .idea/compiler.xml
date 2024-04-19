@@ -21,6 +21,7 @@
         <module name="demo-test" />
         <module name="demo-mybatis-plus" />
         <module name="demo-devtools" />
+        <module name="demo-redis" />
         <module name="demo-java8-features" />
         <module name="demo-global-exception" />
         <module name="demo-package" />
@@ -32,6 +33,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo-cloud" target="1.8" />
+      <module name="demo-cloud-eureka" target="1.8" />
+      <module name="demo-eureka" target="1.8" />
       <module name="demo-son-project" target="1.8" />
     </bytecodeTargetLevel>
   </component>
