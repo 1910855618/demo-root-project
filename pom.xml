@@ -38,6 +38,7 @@
         <module>demo-devtools</module>
         <module>demo-package</module>
         <module>demo-redis</module>
+        <module>demo-user-agent</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
@@ -56,7 +57,8 @@
         <commons.lang3.version>3.14.0</commons.lang3.version>
         <spring.oauth2.version>2.2.5.RELEASE</spring.oauth2.version>
         <mybatis.plus.boot.starter.version>3.5.5</mybatis.plus.boot.starter.version>
-        <knife4j.spring.boot.starter>3.0.3</knife4j.spring.boot.starter>
+        <knife4j.spring.boot.starter.version>3.0.3</knife4j.spring.boot.starter.version>
+        <UserAgentUtils.version>1.21</UserAgentUtils.version>
     </properties>
 
     <dependencies>
@@ -143,7 +145,12 @@
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
-                <version>${knife4j.spring.boot.starter}</version>
+                <version>${knife4j.spring.boot.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${UserAgentUtils.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

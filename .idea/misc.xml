@@ -31,6 +31,7 @@
         <option value="$PROJECT_DIR$/demo-cloud/demo-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/demo-cloud-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/demo-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-user-agent/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

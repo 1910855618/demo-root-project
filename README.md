@@ -18,6 +18,7 @@ demo 集合：
 - SpringBoot 使用 HikariCP(demo-hikaricp)：https://luhang.fun/blog/articles/24
 - SpringBoot 使用 Thymeleaf(demo-thymeleaf)：https://luhang.fun/blog/articles/21
 - SpringBoot 处理跨域(demo-cross-origin)：https://luhang.fun/blog/articles/37
+- SpringBoot 解析 UserAgent(demo-user-agent)：https://luhang.fun/blog/articles/43
 - SpringBoot 使用 Jackson(demo-json)：https://luhang.fun/blog/articles/22
 - SpringBoot 使用 HibernateValidator(demo-validation)：https://luhang.fun/blog/articles/28
 - SpringBoot 使用 Knife4j(demo-knife4j)：https://luhang.fun/blog/articles/27

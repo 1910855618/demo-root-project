@@ -9,27 +9,28 @@
         <module name="demo-validation" />
         <module name="demo-email" />
         <module name="demo-spring-security" />
-        <module name="demo-aop" />
-        <module name="demo-i18n" />
-        <module name="demo-base-config" />
         <module name="demo-websocket" />
-        <module name="demo-async" />
-        <module name="demo-hikaricp" />
         <module name="demo-jdbc" />
         <module name="demo-thymeleaf" />
-        <module name="demo-oauth2-01" />
         <module name="demo-test" />
         <module name="demo-mybatis-plus" />
         <module name="demo-devtools" />
-        <module name="demo-redis" />
-        <module name="demo-java8-features" />
         <module name="demo-global-exception" />
         <module name="demo-package" />
         <module name="demo-cross-origin" />
+        <module name="demo-user-agent" />
         <module name="demo-filter-interceptor" />
+        <module name="demo-mysql" />
+        <module name="demo-aop" />
+        <module name="demo-i18n" />
+        <module name="demo-base-config" />
+        <module name="demo-async" />
+        <module name="demo-hikaricp" />
+        <module name="demo-oauth2-01" />
+        <module name="demo-redis" />
+        <module name="demo-java8-features" />
         <module name="demo-json" />
         <module name="demo-knife4j" />
-        <module name="demo-mysql" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
