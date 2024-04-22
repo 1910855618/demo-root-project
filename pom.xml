@@ -39,6 +39,7 @@
         <module>demo-package</module>
         <module>demo-redis</module>
         <module>demo-user-agent</module>
+        <module>demo-ip</module>
     </modules>
 
     <!-- 指定依赖部版本 -->
@@ -59,6 +60,7 @@
         <mybatis.plus.boot.starter.version>3.5.5</mybatis.plus.boot.starter.version>
         <knife4j.spring.boot.starter.version>3.0.3</knife4j.spring.boot.starter.version>
         <UserAgentUtils.version>1.21</UserAgentUtils.version>
+        <ip2region.version>2.7.0</ip2region.version>
     </properties>
 
     <dependencies>
@@ -151,6 +153,11 @@
                 <groupId>eu.bitwalker</groupId>
                 <artifactId>UserAgentUtils</artifactId>
                 <version>${UserAgentUtils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.lionsoul</groupId>
+                <artifactId>ip2region</artifactId>
+                <version>${ip2region.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

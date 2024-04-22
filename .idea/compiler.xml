@@ -26,6 +26,7 @@
         <module name="demo-base-config" />
         <module name="demo-async" />
         <module name="demo-hikaricp" />
+        <module name="demo-ip" />
         <module name="demo-oauth2-01" />
         <module name="demo-redis" />
         <module name="demo-java8-features" />
