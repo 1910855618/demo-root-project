@@ -30,6 +30,7 @@
         <module name="demo-oauth2-01" />
         <module name="demo-redis" />
         <module name="demo-java8-features" />
+        <module name="demo-lombok" />
         <module name="demo-json" />
         <module name="demo-knife4j" />
       </profile>

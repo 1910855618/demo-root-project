@@ -40,6 +40,7 @@
         <module>demo-redis</module>
         <module>demo-user-agent</module>
         <module>demo-ip</module>
+        <module>demo-lombok</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

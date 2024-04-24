@@ -1,0 +1,4 @@
+#logging:
+#  level:
+#    # root 表示所有包的日志级别
+#    root: debug
