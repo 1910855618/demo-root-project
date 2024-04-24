@@ -27,7 +27,6 @@
         <module name="demo-async" />
         <module name="demo-hikaricp" />
         <module name="demo-ip" />
-        <module name="demo-oauth2-01" />
         <module name="demo-redis" />
         <module name="demo-java8-features" />
         <module name="demo-lombok" />
@@ -38,7 +37,9 @@
     <bytecodeTargetLevel>
       <module name="demo-cloud" target="1.8" />
       <module name="demo-cloud-eureka" target="1.8" />
+      <module name="demo-docker" target="1.8" />
       <module name="demo-eureka" target="1.8" />
+      <module name="demo-oauth2-01" target="1.8" />
       <module name="demo-son-project" target="1.8" />
     </bytecodeTargetLevel>
   </component>
