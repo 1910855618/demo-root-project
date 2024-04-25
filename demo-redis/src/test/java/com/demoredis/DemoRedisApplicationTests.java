@@ -1,5 +1,7 @@
 package com.demoredis;
 
+import com.demoredis.dao.UserDao;
+import com.demoredis.model.dto.UserDTO;
 import com.demoredis.template.JsonRedisTemplate;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -31,6 +33,8 @@ class DemoRedisApplicationTests {
     // 配置 RedisTemplate Bean 后可以直接注入 RedisTemplate
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private UserDao userDao;
 
     @Test
     void contextLoads() {
@@ -110,6 +114,20 @@ class DemoRedisApplicationTests {
         redisTemplate.persist("stringKey");
         remainingTime = redisTemplate.getExpire("stringKey", TimeUnit.SECONDS);
         log.info("stringKey remainingTime: {}s", remainingTime);
+    }
+
+    @Test
+    void redisCacheTest() {
+        UserDTO userDTO = userDao.getUserById(13);
+        log.info("userDTO: {}", userDTO);
+        String val = stringRedisTemplate.opsForValue().get("user::13");
+        log.info("userDTO: {}", val);
+        userDTO.setName("安妮");
+        userDao.change(userDTO);
+        userDTO = userDao.getUserById(13);
+        log.info("userDTO: {}", userDTO);
+        val = stringRedisTemplate.opsForValue().get("user::13");
+        log.info("userDTO: {}", val);
     }
 
 }
