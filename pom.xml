@@ -57,10 +57,11 @@
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <commons.lang3.version>3.14.0</commons.lang3.version>
         <spring.oauth2.version>2.2.5.RELEASE</spring.oauth2.version>
-        <mybatis.plus.boot.starter.version>3.5.5</mybatis.plus.boot.starter.version>
+        <mybatis.plus.boot.starter.version>3.5.6</mybatis.plus.boot.starter.version>
         <knife4j.spring.boot.starter.version>3.0.3</knife4j.spring.boot.starter.version>
         <UserAgentUtils.version>1.21</UserAgentUtils.version>
         <ip2region.version>2.7.0</ip2region.version>
+        <p6spy.version>3.9.1</p6spy.version>
     </properties>
 
     <dependencies>
@@ -158,6 +159,11 @@
                 <groupId>org.lionsoul</groupId>
                 <artifactId>ip2region</artifactId>
                 <version>${ip2region.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

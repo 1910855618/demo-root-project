@@ -1,5 +1,6 @@
 package com.demomybatisplus.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -15,16 +16,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 // 注解在类上，指定类和数据库表的映射关系
-@TableName("user")
+@TableName("t_user")
 public class User {
-    // 注解在实体类的某个字段上，表示这个字段对应数据库表的主键
-    @TableId("id")
+    // 主键 ID, @TableId 注解定义字段为表的主键，type 表示主键类型，IdType.AUTO 表示随着数据库 ID 自增
+    @TableId(type = IdType.AUTO)
     private Long id;
-    // 注解在某个字段上，指定 Java 实体类的字段和数据库表的列的映射关系
-    @TableField("name")
+    // 姓名
     private String name;
+    // 年龄
     private Integer age;
-    private String email;
-    private Long managerId;
-    private LocalDateTime createTime;
+    // 性别
+    private Integer gender;
 }
