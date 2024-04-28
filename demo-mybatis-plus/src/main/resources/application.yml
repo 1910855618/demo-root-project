@@ -7,8 +7,16 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       pool-name: My-HikariCP
+mpw:
+  key: f
 
 mybatis-plus:
+# 自动为实体类凭借表名前缀"t_"，这样可以省略 @TableName("t_user") 注解
+#  global-config:
+#    db-config:
+#      table-prefix: t_
   configuration:
     # 打印 SQL 语句
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 让 Mybatis Plus 框架扫描这些 xml 文件
+  mapper-locations: classpath:/mapper/*Mapper.xml
