@@ -1,11 +1,20 @@
 package com.demomybatisplus;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.AES;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.generator.FastAutoGenerator;
+import com.baomidou.mybatisplus.generator.config.OutputFile;
+import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import com.demomybatisplus.entity.SeckillGoods;
 import com.demomybatisplus.entity.User;
+import com.demomybatisplus.enums.JobEnum;
+import com.demomybatisplus.mapper.SeckillGoodsMapper;
 import com.demomybatisplus.mapper.UserMapper;
 import com.demomybatisplus.model.vo.OrderVO;
 import com.demomybatisplus.service.UserService;
@@ -15,9 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
-import java.util.function.Function;
 
-@SuppressWarnings("all")
 @Log4j2
 @SpringBootTest
 class DemoMybatisPlusApplicationTests {
@@ -25,8 +32,10 @@ class DemoMybatisPlusApplicationTests {
     private UserMapper userMapper;
     @Autowired
     private UserService userService;
+    @Autowired
+    private SeckillGoodsMapper seckillGoodsMapper;
 
-    // 借阅 https://www.quanxiaoha.com/mybatis-plus/mybaitsplus-select-data.html
+    // 借阅 https://www.quanxiaoha.com/mybatis-plus/mybatis-plus-integrate.html
 
     @Test
     void test() {
@@ -271,6 +280,229 @@ class DemoMybatisPlusApplicationTests {
         page.setOptimizeCountSql(false);
         IPage<OrderVO> iPage = userMapper.selectOrderPage(page, new QueryWrapper<OrderVO>().eq("name", "Annie"));
         log.info("total: {}, pages: {}, current: {}, users: {}", iPage.getTotal(), iPage.getPages(), iPage.getCurrent(), iPage.getRecords());
+    }
+
+    /**
+     *
+     * Wrapper 条件构造抽象类
+     * -- AbstractWrapper 查询条件封装，用于生成 sql 中的 where 语句。
+     *  -- QueryWrapper Entity 条件封装操作类，用于查询。
+     *  -- UpdateWrapper Update 条件封装操作类，用于更新。
+     *  -- AbstractLambdaWrapper 使用 Lambda 表达式封装 wrapper
+     *      -- LambdaQueryWrapper 使用 Lambda 语法封装条件，用于查询。
+     *      -- LambdaUpdateWrapper 使用 Lambda 语法封装条件，用于更新。
+     * -- AbstractChainWrapper 链式查询条件封装
+     *  -- UpdateChainWrapper 链式条件封装操作类，用于更新。
+     *  -- LambdaQueryChainWrapper 使用 Lambda 语法封装条件，支持链式调用，用于查询
+     *  -- LambdaUpdateChainWrapper 使用 Lambda 语法封装条件，支持链式调用，用于更新
+     *  -- QueryChainWrapper 链式条件封装操作类，用于查询。
+     * */
+    @Test
+    void mybatisPlusWrapperTest() {
+        // AbstractWrapper 方法
+        // 多字段等于查询, 语句: gender=0 and age=18
+        Map<String, Object> params = new HashMap<>();
+        params.put("gender", "0");
+        params.put("age", "18");
+        new QueryWrapper<>().allEq(params);
+        // 单字段等于, sql: gender=0
+        new QueryWrapper<>().eq("gender", "0");
+        // 不等于, sql: gender<>1
+        new QueryWrapper<>().ne("gender", "1");
+        // 大于, sql: age>18
+        new QueryWrapper<>().gt("age", 18);
+        // 大于等于, sql: age>=18
+        new QueryWrapper<>().ge("age", 18);
+        // 小于, sql:  age<18
+        new QueryWrapper<>().lt("age", 18);
+        // 小于等于, sql: age<=18
+        new QueryWrapper<>().le("age", 18);
+        // 区间查询, sql: dateTime between '2023-1-1' and '2024-1-1'
+        new QueryWrapper<>().between("dateTime", "2023-1-1", "2024-1-1");
+        // 区间查询反选, sql: dateTime not between '2023-1-1' and '2024-1-1'
+        new QueryWrapper<>().notBetween("dateTime", "2023-1-1", "2024-1-1");
+        // 全模糊查询, sql: name like '%Annie%'
+        new QueryWrapper<>().like("name", "Annie");
+        // 全模糊查询反选, sql: name not like '%Annie%'
+        new QueryWrapper<>().notLike("name", "Annie");
+        // 左模糊查询, sql: name like '%Annie'
+        new QueryWrapper<>().likeLeft("name", "Annie");
+        // 左模糊查询反选, sql: name not like '%Annie'
+        new QueryWrapper<>().notLikeLeft("name", "Annie");
+        // 右模糊查询, sql: name like 'Annie%'
+        new QueryWrapper<>().likeRight("name", "Annie");
+        // 右模糊查询反选, sql: name not like 'Annie%'
+        new QueryWrapper<>().notLikeRight("name", "Annie");
+        // 为空查询, sql: name is null
+        new QueryWrapper<>().isNull("name");
+        // 非空查询, sql: name is not null
+        new QueryWrapper<>().isNotNull("name");
+        // 包含查询, sql: age in(14, 16, 18)
+        new QueryWrapper<>().in("age", 14, 16, 18);
+        // 包含查询反选, sql: age not in(14, 16, 18)
+        new QueryWrapper<>().notIn("age", 14, 16, 18);
+        // 子查询, sql: id in(select userId from t_order where goodsPrice > 1000)
+        new QueryWrapper<>().inSql("id", "select userId from t_order where goodsPrice > 1000");
+        // 子查询反选, sql: id not in(select userId from t_order where goodsPrice > 1000)
+        new QueryWrapper<>().notInSql("id", "select userId from t_order where goodsPrice > 1000");
+        // 分组, sql: group by name, gender
+        new QueryWrapper<>().groupBy("name", "gender");
+        // 排序，isAsc true 为升序，false 为降序, sql: order by id asc, age asc
+        new QueryWrapper<>().orderBy(true, true, "id", "age");
+        // 升序, sql: order by id asc, age asc
+        new QueryWrapper<>().orderByAsc("id", "age");
+        // 降序, sql: order by id desc, age desc
+        new QueryWrapper<>().orderByDesc("id", "age");
+        // 过滤分组后数据, sql: having sum(age) > 18
+        new QueryWrapper<>().having("sum(age) > {0}", 18);
+        // func 方法主要方便在出现 if else 下调用不同方法能不断链, sql: id=1 或者 id<>1
+        new QueryWrapper<>().func(i -> {
+            if(true) {
+                i.eq("id", 1);
+            } else {
+                i.ne("id", 1);
+            }
+        });
+        // 拼接 or, sql: name='Annie' or name='Emma'
+        new QueryWrapper<>().eq("name", "Annie").or().eq("name", "Emma");
+        // or 嵌套, sql: or (name='Annie' and name<>'Emma')
+        new QueryWrapper<>().or(i -> i.eq("name", "Annie").ne("name", "Emma"));
+        // and 嵌套, sql: and (name='Annie' and name<>'Emma')
+        new QueryWrapper<>().and(i -> i.eq("name", "Annie").ne("name", "Emma"));
+        // nested 正常嵌套不带 and 或者 or, sql: (name='Annie' and name<>'Emma')
+        new QueryWrapper<>().nested(i -> i.eq("name", "Annie").ne("name", "Emma"));
+        // apply 拼接 sql, sql: id=1 and name='Annie'
+        new QueryWrapper<>().apply("id={0} and name={1}", 1, "Annie");
+        // last 无视优化规则直接拼接到 sql 的最后, 只会调用一次, 多次调用以最后一次为准, 有 sql 注入的风险, sql: limit 1
+        new QueryWrapper<>().last("limit 1");
+        // 拼接 exists (在 exists 中语句没有返回值即为假返回 0, 反之为真返回 1), sql: exists (select id from t_user where age=18)
+        new QueryWrapper<>().exists("select id from t_user where age=18");
+        // 拼接 exists 取反, sql: not exists (select id from t_user where age=18)
+        new QueryWrapper<>().notExists("select id from t_user where age=18");
+        // QueryWrapper 方法
+        // select 设置查询字段, sql: select id, name, age
+        new QueryWrapper<>().select("id", "name", "age");
+        // checkSqlInjection 检查是否存在 sql 注入, 一般并不需要, 如果前端一定要操作 sql 语句时请加上
+        new QueryWrapper<>().checkSqlInjection();
+        // UpdateWrapper 方法
+        // set 设置更新字段, sql: update set name='Annie'
+        new UpdateWrapper<>().set("name", "Annie");
+        // setSql 设置更新字段 sql, sql: update set name='Annie'
+        new UpdateWrapper<>().setSql("name='Annie'");
+        // lambda 获取 LambdaWrapper, QueryWrapper 中使用是获取 LambdaQueryWrapper, UpdateWrapper 中使用是获取 LambdaUpdateWrapper
+        LambdaQueryWrapper<?> lambdaQueryWrapper = new QueryWrapper<>().lambda();
+        LambdaUpdateWrapper<?> lambdaUpdateWrapper = new UpdateWrapper<>().lambda();
+    }
+
+    /**
+     *
+     * Condition 参数作用
+     * */
+    @Test
+    void mybatisPlusConditionTest() {
+        // Wrapper 很多条件判断方法都提供了一个带有 boolean 类型 condition 参数的重载方法, 作用于是否采用这条条件判断
+        String name = "Annie";
+        Integer ageStart = 10;
+        Integer ageEnd = 20;
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        // 如果 name 不为 null 且不为字符串空, 这个 sql where 条件判断将被采用
+        wrapper.eq(StringUtils.isNotBlank(name), "name", name)
+                // ageStart 不为 null, 这个 sql where 条件判断将被采用
+                .ge(ageStart != null, "age", ageStart)
+                // ageEnd 不为 null, 这个 sql where 条件判断将被采用
+                .le(ageEnd != null, "name", ageEnd);
+    }
+
+    /**
+     *
+     * 代码生成器
+     * */
+    @Test
+    void mybatisPlusCodeGeneratorTest() {
+        FastAutoGenerator.create(
+                "jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8",
+                "root", "123456")
+                .globalConfig(builder -> {
+                    // 设置作者
+                    builder.author("luhang")
+                            // 开启 swagger 模式，会自动添加 Swagger 相关注解
+                            .enableSwagger()
+                            // 指定输出目录
+                            .outputDir("C:/Users/PC/Desktop/test");
+                }).packageConfig(builder -> {
+                    // 设置父包名
+                    builder.parent("com")
+                            // 设置父包模块名
+                            .moduleName("demomybatisplus")
+                            // 设置mapperXml生成路径
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, "C:/Users/PC/Desktop/test/mapper"));
+                }).strategyConfig(builder -> {
+                    // 设置需要生成的表名
+                    builder.addInclude("t_user")
+                            // 设置过滤表前缀
+                            .addTablePrefix("t_", "c_");
+                })
+                // 使用 Freemarker 引擎模板，默认的是 Velocity 引擎模板
+                .templateEngine(new FreemarkerTemplateEngine())
+                // 执行
+                .execute();
+    }
+
+    /**
+     *
+     * 自动填充
+     * */
+    @Test
+    void mybatisPlusAutofillTest() {
+        // createTime 不用赋值应为设置了 fill, 将在适当时机进行填充
+//        userService.save(User.builder().name("Lilia").age(18).gender(0).build());
+        // changeTime 不用赋值应为设置了 fill, 将在适当时机进行填充
+        userService.updateById(User.builder().id(19L).name("Lilia").age(18).gender(0).build());
+    }
+
+    /**
+     *
+     * 通用枚举
+     * */
+    @Test
+    void mybatisPlusGenericEnumTest() {
+        // 新增时 mybatis plus 会自动获取到 JobEnum 中的 code 入库
+//        userService.save(User.builder().name("Vivien").gender(0).age(16).job(JobEnum.MONITOR).build());
+        // 查询时 mybatis plus 会自动获取到 JobEnum 中的 code 进行查询
+        User user = userService.getOne(new QueryWrapper<User>().lambda().eq(User::getName, "Vivien").eq(User::getJob, JobEnum.MONITOR));
+        log.info("user: {}", user);
+    }
+
+    /**
+     *
+     * 乐观锁
+     * */
+    @Test
+    void mybatisPlusOptimisticLocksTest() {
+        // 设置当前版本号
+        SeckillGoods seckillGoods = SeckillGoods.builder().version(1).build();
+        // 在版本号不等于 1 时便不会修改(比如在多线程情况下, 这条被别人更新, 版本号也会被更新不在是 1)
+        seckillGoodsMapper.update(seckillGoods,
+                new UpdateWrapper<SeckillGoods>().lambda().setSql("count = count - 1").eq(SeckillGoods::getId, 1L));
+        // 版本号被更新
+        log.info("version: {}", seckillGoods.getVersion());
+    }
+
+    /**
+     *
+     * 逻辑删除
+     * */
+    @Test
+    void mybatisPlusIsDeletedTest() {
+        userService.save(User.builder().name("Tirias").age(16).gender(1).build());
+        // 修改操作需要检查 isDeleted 字段是否等于 0
+        userService.update(User.builder().name("Tirias").age(16).gender(1).build(), new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias"));
+        // 查询操作需要检查 isDeleted 字段是否等于 0
+        log.info("remove before user: {}", userService.getOne(new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias")));
+        // 删除不会执行真正的删除, 只会修改 isDeleted 为 1
+        userService.remove(new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias"));
+        // 由于逻辑删除将 isDeleted 修改为 1, 查询将无法查出这条数据
+        log.info("remove afterwards user: {}", userService.getOne(new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias")));
     }
 
     /**

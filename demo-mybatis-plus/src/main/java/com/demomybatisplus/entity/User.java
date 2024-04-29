@@ -1,6 +1,7 @@
 package com.demomybatisplus.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.demomybatisplus.enums.JobEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,9 +32,22 @@ public class User {
     // 性别
     private Integer gender;
 
+    // fill 设置自动填充, 填充时机为 insert
+    @TableField(value = "createTime", fill = FieldFill.INSERT)
+    // 创建时间
+    private LocalDateTime createTime;
+
+    // fill 设置自动填充, 填充时机为 update
+    @TableField(value = "changeTime", fill = FieldFill.UPDATE)
+    // 更变时间
+    private LocalDateTime changeTime;
+
+    // 职位
+    private JobEnum job;
+
     // 逻辑删除注解
-//    @TableLogic
-//    private Integer isDeleted;
+    @TableLogic
+    private Integer isDeleted;
 
     // 乐观锁版本号注解
 //    @Version

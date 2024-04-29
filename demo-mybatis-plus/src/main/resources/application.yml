@@ -7,8 +7,6 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       pool-name: My-HikariCP
-mpw:
-  key: f
 
 mybatis-plus:
 # 自动为实体类凭借表名前缀"t_"，这样可以省略 @TableName("t_user") 注解
