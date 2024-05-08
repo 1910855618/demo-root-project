@@ -15,7 +15,7 @@ demo 集合：
 - SpringBoot 使用 Lombok(demo-lombok)：https://luhang.fun/blog/articles/45
 - SpringBoot 连接 MySQL(demo-mysql)：https://luhang.fun/blog/articles/23
 - SpringBoot 使用 JdbcTemplate(demo-jdbc)：https://luhang.fun/blog/articles/35
-- SpringBoot 整合 MyBatisPlus(demo-mybatis-plus)：更新中...
+- SpringBoot 整合 MyBatisPlus(demo-mybatis-plus)：https://luhang.fun/blog/articles/46
 - SpringBoot 整合 Redis(demo-redis)：https://luhang.fun/blog/articles/42
 - SpringBoot 使用 HikariCP(demo-hikaricp)：https://luhang.fun/blog/articles/24
 - SpringBoot 使用 Thymeleaf(demo-thymeleaf)：https://luhang.fun/blog/articles/21

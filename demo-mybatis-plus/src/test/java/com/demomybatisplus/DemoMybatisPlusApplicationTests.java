@@ -35,8 +35,6 @@ class DemoMybatisPlusApplicationTests {
     @Autowired
     private SeckillGoodsMapper seckillGoodsMapper;
 
-    // 借阅 https://www.quanxiaoha.com/mybatis-plus/mybatis-plus-integrate.html
-
     @Test
     void test() {
         List<User> users = userMapper.selectList(null);
@@ -84,6 +82,7 @@ class DemoMybatisPlusApplicationTests {
 //                    .id(2L)
                     .name("Annie").age(16).gender(0).build());
         }
+        // int batchSize 参数为每次批量新增或更新条数的大小
         boolean isOk = userService.saveOrUpdateBatch(users, 2);
         log.info("isOk: {}", isOk);
     }
@@ -419,6 +418,7 @@ class DemoMybatisPlusApplicationTests {
      * */
     @Test
     void mybatisPlusCodeGeneratorTest() {
+        // 连接 url、用户、密码
         FastAutoGenerator.create(
                 "jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8",
                 "root", "123456")
@@ -475,6 +475,23 @@ class DemoMybatisPlusApplicationTests {
 
     /**
      *
+     * 逻辑删除
+     * */
+    @Test
+    void mybatisPlusIsDeletedTest() {
+        userService.save(User.builder().name("Lux").age(16).gender(1).build());
+        // 修改操作需要检查 isDeleted 字段是否等于 0
+        userService.update(User.builder().name("Lux").age(16).gender(1).build(), new UpdateWrapper<User>().lambda().eq(User::getName, "Lux"));
+        // 查询操作需要检查 isDeleted 字段是否等于 0
+        log.info("remove before user: {}", userService.getOne(new UpdateWrapper<User>().lambda().eq(User::getName, "Lux")));
+        // 删除不会执行真正的删除, 只会修改 isDeleted 为 1
+        userService.remove(new UpdateWrapper<User>().lambda().eq(User::getName, "Lux"));
+        // 由于逻辑删除将 isDeleted 修改为 1, 查询将无法查出这条数据
+        log.info("remove afterwards user: {}", userService.getOne(new UpdateWrapper<User>().lambda().eq(User::getName, "Lux")));
+    }
+
+    /**
+     *
      * 乐观锁
      * */
     @Test
@@ -486,23 +503,6 @@ class DemoMybatisPlusApplicationTests {
                 new UpdateWrapper<SeckillGoods>().lambda().setSql("count = count - 1").eq(SeckillGoods::getId, 1L));
         // 版本号被更新
         log.info("version: {}", seckillGoods.getVersion());
-    }
-
-    /**
-     *
-     * 逻辑删除
-     * */
-    @Test
-    void mybatisPlusIsDeletedTest() {
-        userService.save(User.builder().name("Tirias").age(16).gender(1).build());
-        // 修改操作需要检查 isDeleted 字段是否等于 0
-        userService.update(User.builder().name("Tirias").age(16).gender(1).build(), new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias"));
-        // 查询操作需要检查 isDeleted 字段是否等于 0
-        log.info("remove before user: {}", userService.getOne(new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias")));
-        // 删除不会执行真正的删除, 只会修改 isDeleted 为 1
-        userService.remove(new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias"));
-        // 由于逻辑删除将 isDeleted 修改为 1, 查询将无法查出这条数据
-        log.info("remove afterwards user: {}", userService.getOne(new UpdateWrapper<User>().lambda().eq(User::getName, "Tirias")));
     }
 
     /**
