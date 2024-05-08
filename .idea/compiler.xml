@@ -32,6 +32,7 @@
         <module name="demo-lombok" />
         <module name="demo-json" />
         <module name="demo-knife4j" />
+        <module name="demo-p6spy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
