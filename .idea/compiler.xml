@@ -19,6 +19,7 @@
         <module name="demo-package" />
         <module name="demo-cross-origin" />
         <module name="demo-user-agent" />
+        <module name="demo-create-springboot" />
         <module name="demo-filter-interceptor" />
         <module name="demo-mysql" />
         <module name="demo-aop" />
