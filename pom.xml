@@ -41,6 +41,7 @@
         <module>demo-ip</module>
         <module>demo-lombok</module>
         <module>demo-p6spy</module>
+        <module>demo-listener</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

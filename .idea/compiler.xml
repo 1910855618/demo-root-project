@@ -22,6 +22,7 @@
         <module name="demo-create-springboot" />
         <module name="demo-filter-interceptor" />
         <module name="demo-mysql" />
+        <module name="demo-listener" />
         <module name="demo-aop" />
         <module name="demo-i18n" />
         <module name="demo-base-config" />

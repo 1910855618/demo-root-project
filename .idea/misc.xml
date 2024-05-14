@@ -35,6 +35,8 @@
         <option value="$PROJECT_DIR$/demo-ip/pom.xml" />
         <option value="$PROJECT_DIR$/demo-lombok/pom.xml" />
         <option value="$PROJECT_DIR$/demo-p6spy/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-create-springboot/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
