@@ -12,6 +12,6 @@ public class ConfigCustomListener implements ApplicationListener<SpringApplicati
     // 通过实现 ApplicationListener.onApplicationEvent 监听 SpringApplicationEvent 事件
     @Override
     public void onApplicationEvent(SpringApplicationEvent event) {
-        log.info("ConfigCustomListener event: {}", event.toString());
+        log.info("通过配置文件配置监听器监听到 SpringApplicationEvent 事件: {}", event.toString());
     }
 }

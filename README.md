@@ -35,7 +35,7 @@ luhang！每天提升一点加油！！！
 - [SpringBoot 使用 AOP(demo-aop)](https://luhang.fun/blog/articles/26)
 - [SpringBoot 全局异常处理(demo-global-exception)](https://luhang.fun/blog/articles/31)
 - [SpringBoot 使用过滤器和拦截器(demo-filter-interceptor)](https://luhang.fun/blog/articles/32)
-- [SpringBoot 监听器(demo-listener)](https://luhang.fun/blog/articles/49)
+- [SpringBoot 使用监听器(demo-listener)](https://luhang.fun/blog/articles/49)
 - [SpringBoot 使用 I18n(demo-i18n)](https://luhang.fun/blog/articles/29)
 - [SpringBoot 发送 Email邮件(demo-email)](https://luhang.fun/blog/articles/33)
 - [SpringBoot 使用 WebSocket(demo-websocket)](https://luhang.fun/blog/articles/34)

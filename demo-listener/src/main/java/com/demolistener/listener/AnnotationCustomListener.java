@@ -4,12 +4,10 @@ import com.demolistener.listener.event.AsyncCustomEvent;
 import com.demolistener.listener.event.CustomEvent;
 import com.demolistener.listener.event.SpELCustomEvent;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.boot.context.event.SpringApplicationEvent;
+import org.springframework.context.ApplicationEvent;
 import org.springframework.context.event.EventListener;
-import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
@@ -25,9 +23,9 @@ public class AnnotationCustomListener {
         log.info("应用启动完成, {}", event);
     }
 
-    // 通过注解监听多个事件，SpringApplicationEvent 为 ApplicationStartedEvent、ApplicationReadyEvent 事件的父类
+    // 通过注解监听多个事件，Spring 中使用 ApplicationEvent 接口来表示一个事件，它是所有 Spring 事件的父类
     @EventListener(classes = {ApplicationStartedEvent.class, ApplicationReadyEvent.class})
-    public void handleEvent(SpringApplicationEvent event) {
+    public void handleEvent(ApplicationEvent event) {
         if (event instanceof ApplicationStartedEvent) {
             log.info("监听到多个事件之一 ApplicationStartedEvent 事件, {}", event);
         }

@@ -11,6 +11,6 @@ import org.springframework.context.ApplicationListener;
 public class SpringApplicationCustomListener implements ApplicationListener<SpringApplicationEvent> {
     @Override
     public void onApplicationEvent(SpringApplicationEvent event) {
-        log.info("SpringApplicationCustomListener event: {}", event.toString());
+        log.info("通过启动类注册监听器监听到 SpringApplicationEvent 事件: {}", event.toString());
     }
 }
