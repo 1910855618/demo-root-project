@@ -22,6 +22,7 @@ luhang！每天提升一点加油！！！
 - [SpringBoot 使用 JdbcTemplate(demo-jdbc)](https://luhang.fun/blog/articles/35)
 - [SpringBoot 使用 p6spy 打印 Sql 语句(demo-p6spy)](https://luhang.fun/blog/articles/47)
 - [SpringBoot 整合 MyBatisPlus(demo-mybatis-plus)](https://luhang.fun/blog/articles/46)
+- [SpringBoot 事务管理(demo-transactional)](https://luhang.fun/blog/articles/50)
 - [SpringBoot 整合 Redis(demo-redis)](https://luhang.fun/blog/articles/42)
 - [SpringBoot 使用 HikariCP(demo-hikaricp)](https://luhang.fun/blog/articles/24)
 - [SpringBoot 使用 Thymeleaf(demo-thymeleaf)](https://luhang.fun/blog/articles/21)
