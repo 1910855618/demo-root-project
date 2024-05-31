@@ -1,0 +1,14 @@
+spring:
+  # 配置 RabbitMQ
+  rabbitmq:
+    # 单机配置
+    host: localhost
+    port: 5672
+    # 集群配置
+#    addresses: localhost:5672 # 使用“,”隔开, 例如: host1:port,host2:port
+    username: guest
+    password: guest
+    # 超时设置, 单位为毫秒
+    connection-timeout: 15000
+    # 虚拟主机名称, 默认是 /
+    virtual-host: /

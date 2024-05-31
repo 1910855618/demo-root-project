@@ -43,6 +43,7 @@
         <module>demo-p6spy</module>
         <module>demo-listener</module>
         <module>demo-transactional</module>
+        <module>demo-rabbitmq</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

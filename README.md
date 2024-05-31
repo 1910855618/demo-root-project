@@ -41,6 +41,7 @@ luhang！每天提升一点加油！！！
 - [SpringBoot 发送 Email邮件(demo-email)](https://luhang.fun/blog/articles/33)
 - [SpringBoot 使用 WebSocket(demo-websocket)](https://luhang.fun/blog/articles/34)
 - [SpringBoot 使用 SpringSecurity(demo-spring-security)](https://luhang.fun/blog/articles/18)
+- [SpringBoot 整合 RabbitMQ(demo-rabbitmq)](https://luhang.fun/blog/articles/51)
 
 持续输出中...
 
