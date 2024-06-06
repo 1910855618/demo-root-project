@@ -39,6 +39,11 @@
         <option value="$PROJECT_DIR$/demo-create-springboot/pom.xml" />
         <option value="$PROJECT_DIR$/demo-transactional/pom.xml" />
         <option value="$PROJECT_DIR$/demo-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-dubbo/common-api/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-dubbo/server-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-dubbo/server-provider/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

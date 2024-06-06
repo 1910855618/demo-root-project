@@ -21,6 +21,7 @@
         <module name="demo-user-agent" />
         <module name="demo-create-springboot" />
         <module name="demo-filter-interceptor" />
+        <module name="server-provider" />
         <module name="demo-mysql" />
         <module name="demo-listener" />
         <module name="demo-aop" />
@@ -29,8 +30,10 @@
         <module name="demo-async" />
         <module name="demo-hikaricp" />
         <module name="demo-ip" />
+        <module name="server-consumer" />
         <module name="demo-transactional" />
         <module name="demo-rabbitmq" />
+        <module name="common-api" />
         <module name="demo-redis" />
         <module name="demo-java8-features" />
         <module name="demo-lombok" />
@@ -40,6 +43,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="1.7" />
       <module name="demo-cloud" target="1.8" />
       <module name="demo-cloud-eureka" target="1.8" />
       <module name="demo-docker" target="1.8" />
