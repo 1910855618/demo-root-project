@@ -46,6 +46,8 @@ luhang！每天提升一点加油！！！
 持续输出中...
 
 ## Dubbo menu
+- [创建 SpringBoot 整和 Dubbo(demo-dubbo)](https://luhang.fun/blog/articles/52)
+
 持续输出中...
 
 ## SpringCloud menu

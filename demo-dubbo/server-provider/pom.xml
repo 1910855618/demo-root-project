@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>server-provider</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>server-provider</name>
+    <description>server-provider</description>
+
+    <!-- 打包文件为 jar 包 -->
+    <packaging>jar</packaging>
+
+    <!-- 打包时跳过测试 -->
+    <properties>
+        <skipTests>true</skipTests>
+    </properties>
+
+    <!-- 继承父工程 -->
+    <parent>
+        <groupId>com</groupId>
+        <artifactId>demo-dubbo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+        <!-- 统一定义接口，供其余子模块引用 -->
+        <dependency>
+            <groupId>com</groupId>
+            <artifactId>common-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-dependencies-zookeeper-curator5</artifactId>
+            <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-reload4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- spring 测试依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.serverprovider.ServerProviderApplication</mainClass>
+                    <skip>true</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
