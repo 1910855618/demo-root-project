@@ -1,9 +1,9 @@
 package com.serverprovider.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.commonapi.service.TestService;
+import org.apache.dubbo.config.annotation.DubboService;
 
-@Service
+@DubboService
 public class TestServiceImpl implements TestService {
     @Override
     public String hello(String message) {

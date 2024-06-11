@@ -13,3 +13,4 @@ dubbo:
   protocol:
     # dubbo协议, 固定写法
     name: dubbo
+    port: -1
