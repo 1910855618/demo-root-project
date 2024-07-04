@@ -37,6 +37,7 @@
         <module name="demo-redis" />
         <module name="demo-java8-features" />
         <module name="demo-lombok" />
+        <module name="demo-scheduled" />
         <module name="demo-json" />
         <module name="demo-knife4j" />
         <module name="demo-p6spy" />
@@ -50,6 +51,7 @@
       <module name="demo-eureka" target="1.8" />
       <module name="demo-oauth2-01" target="1.8" />
       <module name="demo-son-project" target="1.8" />
+      <module name="scheduled" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
