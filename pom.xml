@@ -45,6 +45,7 @@
         <module>demo-transactional</module>
         <module>demo-rabbitmq</module>
         <module>demo-scheduled</module>
+        <module>demo-pool2</module>
     </modules>
 
     <!-- 指定依赖部版本 -->

@@ -44,6 +44,7 @@ luhang！每天提升一点加油！！！
 - [SpringBoot 使用 WebSocket(demo-websocket)](https://luhang.fun/blog/articles/34)
 - [SpringBoot 使用 SpringSecurity(demo-spring-security)](https://luhang.fun/blog/articles/18)
 - [SpringBoot 集成 RabbitMQ(demo-rabbitmq)](https://luhang.fun/blog/articles/51)
+- [SpringBoot 集成 commons-pool2 连接池(demo-pool2)](https://luhang.fun/blog/articles/56)
 
 持续输出中...
 

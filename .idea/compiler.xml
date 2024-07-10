@@ -24,6 +24,7 @@
         <module name="server-provider" />
         <module name="demo-mysql" />
         <module name="demo-listener" />
+        <module name="demo-pool2" />
         <module name="demo-aop" />
         <module name="demo-i18n" />
         <module name="demo-base-config" />
